@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Signika+Negative:300,400&display=swap');
+
+    body {
+        font-family: "Signika Negative", sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+    }
+
+    .container {
+        overflow: hidden !important;
+    }
+
+    img {
+        max-width: 100%;
+    }
+
+    section {
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    section .heading {
+        position: relative;
+        margin: auto;
+        color: darkgoldenrod;
+        font-size: 40px;
+        z-index: 3;
+    }
+
+    section .text {
+        position: relative;
+        margin: auto;
+        color: white;
+        font-size: 32px;
+        z-index: 3;
+    }
+
+    section.green {
+        background: lightblue;
+    }
+
+    section.grey {
+        background: grey;
+    }
+
+    section.red {
+        background: steelblue;
+    }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <section class="green">
+            <div class="heading title">ScrollTrigger & Smooth-Scrollbar</div>
+        </section>
+        <section class="grey">
+            <div class="text title">Section 2</div>
+        </section>
+        <section class="red">
+            <div class="text title">Section 3</div>
+        </section>
+    </div>
+    <script src="js/jquery.js"></script>
+    <script src="js/lucid.js"></script>
+    <script>
+
+        // http://ataredo.com/morphology/lucidscroll/
+        
+        $(window).on('load', function() {
+            $(this).impulse({
+            });
+        });
+
+        $(window).resize();
+    </script>
+</body>
+
+</html>
